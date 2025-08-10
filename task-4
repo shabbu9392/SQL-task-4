@@ -1,0 +1,14 @@
+--------Aggertate functions----------
+SELECT SUM(salary) AS total_salary, AVG(salary) AS avg_salary
+FROM employees;
+----GROUPBY------
+SELECT department, AVG(salary) AS avg_salary
+FROM employees
+GROUP BY department;
+----HAVING-----
+SELECT department, COUNT(*) AS num_employees
+FROM employees
+GROUP BY department
+HAVING COUNT(*) > 5;
+---outcome------
+GROUP BY department, job_title
